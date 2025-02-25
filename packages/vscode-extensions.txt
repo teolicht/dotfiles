@@ -4,7 +4,6 @@ github.copilot
 github.copilot-chat
 ionide.ionide-fsharp
 layfredrc.dark-purple-and-gold
-ms-dotnettools.csdevkit
 ms-dotnettools.csharp
 ms-dotnettools.vscode-dotnet-runtime
 ms-python.debugpy

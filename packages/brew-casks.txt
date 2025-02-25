@@ -1,10 +1,10 @@
 1password-cli
 aerospace
-anki
 calibre
 dotnet-sdk7-0-400
 dotnet-sdk8-0-400
 expressvpn
+font-commit-mono-nerd-font
 font-hack-nerd-font
 font-jetbrains-mono-nerd-font
 font-meslo-lg-nerd-font
@@ -14,6 +14,7 @@ font-sf-pro
 geekbench
 ghostty
 karabiner-elements
+localsend
 mactex-no-gui
 obsidian
 orion
