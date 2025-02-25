@@ -1,0 +1,118 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+    "workbench.settings.editor": "json",
+
+    "editor.fontFamily": "CaskaydiaMono Nerd Font Light",
+    "editor.fontSize": 13,
+    "editor.cursorBlinking": "solid",
+    "editor.lineNumbers": "relative",
+    "editor.stickyScroll.enabled": false,
+    "editor.minimap.enabled": false,
+    
+    "git.openRepositoryInParentFolders": "never",
+
+    // Disable path to current position in file
+    "breadcrumbs.symbolPath": "on",
+
+    // markdown-preview-enhanced settings
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "markdown-preview-enhanced.codeBlockTheme": "solarized-dark.css",
+    
+    // vscodevim settings 
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#f79cff",
+    // "vim.enableNeovim": true,
+
+    // Disable annoying Ionide actions
+    "FSharp.inlayHints.parameterNames": false,
+    "FSharp.inlayHints.typeAnnotations": false,
+
+    "workbench.colorCustomizations": {
+      "[One Dark Pro Darker]": {
+        "editor.background": "#1a1d22", // color from AstroTheme
+        "editorCursor.background": "#0e0f12",
+        "editorCursor.foreground": "#ffffff",
+        "titleBar.activeBackground": "#121417", // top bar
+        "activityBar.background": "#121417", // left bar
+        "statusBar.background": "#121417", // bottom bar
+        "tab.activeBackground": "#282c34", // active bar 
+        "tab.activeBorder": "#aa00ff",  // active bar border
+        "statusBarItem.remoteBackground": "#121417" // bottom left icon
+      },
+      "[Dark Purple And Gold]": {
+        "editorCursor.background": "#000000",
+        "editorCursor.foreground": "#ffffff",
+
+        "titleBar.activeBackground": "#12151f", // top bar
+        "titleBar.inactiveBackground": "#181b28", // top bar
+        "titleBar.activeForeground": "#b6b6b6", // top bar text
+
+        "statusBar.background": "#12151f", // bottom bar
+        "statusBar.foreground": "#b6b6b6", // bottom bar text
+        "statusBarItem.remoteBackground": "#12151f", // bottom left icon background
+        "statusBarItem.remoteForeground": "#b6b6b6", // bottom left icon
+
+        "activityBar.foreground": "#bc47ff", // sidebar icons when hovering 
+        "activityBar.inactiveForeground": "#b6b6b6", // sidebar icons
+        "activityBar.background": "#12151f", // leftmost bar 
+        "activityBarBadge.background": "#bc47ff", // notification icon base
+        "activityBarBadge.foreground": "#e7e7e7", // notificatoin icon number
+
+        "sideBarTitle.foreground": "#c45eff", // title in the top left
+        "list.activeSelectionBackground": "#430161", // file explorer selected file
+
+        "tab.activeBorder": "#0000", // remove active tab border
+        "tab.activeBackground": "#430161", // purple accent 
+        "tab.inactiveBackground": "#181b28", // same background as editor
+        "tab.inactiveForeground": "#919191", // greyed out tab name if inactive
+
+        "breadcrumb.foreground":"#919191", // file path text
+        "editorGroupHeader.tabsBorder": "#0000", // border between tabs and breadcrumbs
+        "editorGroupHeader.border": "#0000", // border between breadcrumbs and editor
+        "icon.foreground": "#919191", // mainly to change actions icons (in the top right) 
+
+        "textLink.foreground": "#c053ff", // links
+        "textLink.activeForeground": "#f79cff", // when hovering over link
+
+        "editorLineNumber.activeForeground": "#f79cff" // current line number
+        
+      },
+  },
+  "editor.tokenColorCustomizations": {
+    "[Dark Purple And Gold]": {
+      "textMateRules": [
+        {
+          "scope": ["variable.other.property"], // color after the dot
+          "settings": {
+            "foreground": "#c2c2c2",
+          }
+        },
+        {
+          "scope": [
+            "string",
+            "punctuation.definition.string.begin",
+            "punctuation.definition.string.end"
+          ],
+          "settings": {
+            "foreground": "#a5ee69",
+          }
+        }
+      ]
+    }
+  },
+  "workbench.colorTheme": "Tokyo Night",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  // Filetype-specific settings
+  "[python]": {
+    "editor.rulers": [100]
+  },
+  "[csharp]": {
+    "editor.rulers": [100]
+  },
+  "dotnet.server.useOmnisharp": true
+}

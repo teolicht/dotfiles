@@ -1,0 +1,45 @@
+Goal of menu bar:
+--------------------------------
+APPLE_ICON 
+
+[1] [2] [3] [4] [5] 
+
+APP_ICON APP_NAME
+
+
+
+
+
+
+
+
+MEDIA 
+
+CPU 
+
+MEM 
+
+BAT
+
+DATE&TIME
+--------------------------------
+
+* Battery color could go from green to red according to percentage
+
+TODO ---
+
+[ ] - Try to find an alternative to the input_source polling rate, right now it's checking every single second
+        - Ideal would be something that detects a change in input_source. But I tried and its not triggering any events I could listen to.
+
+[ ] - Try to find an alternative to the wifi polling rate, right now its constantly pinging apple.com 
+        - Sometimes it fails the ping and the wifi becomes red, even though i didn't lose connection
+        - Again, ideal would be something that only runs when a lost connection is detected. But I guess the only way to implement this is by having something constantly pinging a website until it fails.
+
+[ ] - Transparent background for the items -> brighter background in the future (maybe bright during the day, dark during the night?)
+
+[ ] - Make AeroSpace workspaces dynamic
+        - creating/deleting workspaces in AeroSpace isn't possible. So I could configure Sketchybar to only show workspaces currently have windows open? 
+            - But then since I have apps assigned to specific workspaces, at some point the statusbar could be showing something likle [1][3][4] which is a bit weird. But could work. It's actually a nice overview of which workspaces actually have windows.
+        - Since I don't like the idea of the workspaces statusbar constantly changing to show which windows are open where, I could instead implement a simple script that makes the workspaces without windows a different color, so I know those workspaces are empty. 
+
+[ ] - Show icon of current app?

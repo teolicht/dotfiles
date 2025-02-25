@@ -1,0 +1,22 @@
+shell-integration-features = no-cursor
+shell-integration = zsh
+cursor-style = block
+
+font-family = CaskaydiaMono Nerd Font
+font-size = 13
+
+theme = tokyonight_night
+background = #16161f
+background-opacity = 0.9 
+background-blur = true
+minimum-contrast = 1
+
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = hidden
+macos-icon = custom-style
+macos-icon-ghost-color = #a200ff
+macos-icon-screen-color = #000000
+
+mouse-hide-while-typing = true
+
+
