@@ -7,17 +7,21 @@ ff() {
 }
 
 # Git
+# *The `git` oh-my-zsh plugin defines many more
 alias gs="git status"
 alias gc="git commit -m"
 alias gca="git commit -a -m"
-alias gp="git push"
+alias gP="git push"
+alias gp="git pull"
 alias ga="git add"
 alias gd="git diff"
 
-# Important dirs
-alias dk="cd ~/Desktop"
-alias dw="cd ~/Downloads"
-alias ond="cd ~/"
+# Directories 
+alias dt="cd ~/Desktop"
+alias dl="cd ~/Downloads"
+alias df="cd ~/.dotfiles/"
+alias cfg="cd ~/.config/"
+alias ond="cd ~/Library/CloudStorage/OneDrive-UniversityofCopenhagen/"
 alias dma="cd ~/Uni/Courses/DMA/"
 alias pop="cd ~/Uni/Courses/PoP/"
 alias cdid="cd ~/Uni/Courses/ID/"
@@ -25,9 +29,6 @@ alias cdsu="cd ~/Uni/Courses/SU/"
 alias obd="cd ~/Obsidian/DatalogiVault/"
 alias cdnvim="cd ~/.config/nvim/"
 alias cdbn="cd ~/Box\ Sync/Programming/Python/Bots/nerds-bot/"
-
-# Dotfiles repository
-alias dotf="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # Open books
 alias clrs="open ~/Uni/Courses/DMA/Introduction_to_Algorithms_4th_edition.pdf"
