@@ -12,7 +12,7 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write -g InitialKeyRepeat -int 10
 
 # 'Delay until repeat' slider in Keyboard settings (min. there is 2 i think)
-defaults write -g KeyRepeat -int 1 
+defaults write -g KeyRepeat -int 2 
 
 # Enable ctrl+cmd+click to drag from anywhere on a window
 defaults write -g NSWindowShouldDragOnGesture -bool true 
