@@ -169,14 +169,6 @@ local config = function()
     return contents
   end
 
-  -- Create new capabilities with nvim-cmp and brodacast to LSP servers
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities = vim.tbl_deep_extend(
-    'force',
-    capabilities,
-    require('cmp_nvim_lsp').default_capabilities()
-  )
-
   -- Servers list
   local servers = {
     -- PYTHON --
@@ -225,6 +217,9 @@ local config = function()
     },
   })
 
+  -- Create new capabilities with blink.cmp and brodacast to LSP servers
+  local capabilities = require('blink.cmp').get_lsp_capabilities() 
+
   -- Mason setup
   require('mason').setup()
   local ensure_installed = vim.tbl_keys(servers or {})
@@ -257,7 +252,8 @@ return {
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     'jose-elias-alvarez/null-ls.nvim',
-    'aznhe21/actions-preview.nvim'
+    'aznhe21/actions-preview.nvim',
+    'saghen/blink.cmp'
   },
   config = config,
 }
