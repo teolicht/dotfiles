@@ -66,11 +66,11 @@ local tokyonight = {
   lazy = false,
   config = function()
     require('tokyonight').setup({
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
+      -- transparent = true,
+      -- styles = {
+      --   sidebars = "transparent",
+      --   floats = "transparent",
+      -- },
       style = 'night',
     })
   end,
