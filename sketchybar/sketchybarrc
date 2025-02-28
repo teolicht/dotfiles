@@ -1,9 +1,11 @@
+#!/bin/bash
+
 # This is a demo config to showcase some of the most important commands.
 # It is meant to be changed and configured, as it is intentionally kept sparse.
 # For a (much) more advanced configuration example see my dotfiles:
 # https://github.com/FelixKratz/dotfiles
 
-source ./colors.sh
+source "$CONFIG_DIR/colors.sh"
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
@@ -54,7 +56,7 @@ sketchybar --add item apple left \
         icon.padding_left=8 \
         icon.padding_right=10 \
         icon.y_offset=1 \
-        background.color=$TOKYONIGHT_8 \
+        background.color="$DARK_GRAY" \
         background.corner_radius=50 \
         background.border_width=3 \
         background.height=32 \
@@ -109,7 +111,7 @@ sketchybar --add item clock right \
         label.font="SF Pro:Black:15.0" \
         label.y_offset=1 \
         background.color=0xa89ece6a \
-        background.color=$BLACK \
+        background.color=$BLACK_100 \
         update_freq=15 \
         script="$PLUGIN_DIR/clock.sh"
 
