@@ -1,14 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
-source ~/.config/sketchybar/colors.sh 
+source "$CONFIG_DIR/colors.sh"
 
-if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
-    sketchybar --set $NAME \
+if [[ "$1" == "$FOCUSED_WORKSPACE" ]]; then
+    sketchybar --set "$NAME" \
         label.font.style="Black" \
-        background.color=$BLACK_60
+        background.color="$BLACK_60"
 else
-    sketchybar --set $NAME \
+    sketchybar --set "$NAME" \
         label.font.style="Black" \
-        background.color=$BLACK_80
+        background.color="$BLACK_80"
 fi
 

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 get_cpu_usage() {
     case $(uname -s) in
@@ -24,5 +24,5 @@ get_cpu_usage() {
 
 sketchybar --set cpu \
     icon= \
-    label=$(get_cpu_usage)
+    label="$(get_cpu_usage)"
 
