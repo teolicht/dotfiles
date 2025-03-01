@@ -10,11 +10,11 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-    'exec-and-forget borders active_color=0x99e1e3e4 inactive_color=0x99494d64 width=5.0',
-    'exec-and-forget sketchybar'
+    'exec-and-forget borders active_color=0xe6bb9af7 inactive_color=0x00000000 width=5.0',
 ]
+# 'exec-and-forget borders active_color=0x99e1e3e4 inactive_color=0x99494d64 width=5.0',
 
-exec-on-workspace-change = ['/opt/homebrew/bin/zsh', '-c',
+exec-on-workspace-change = ['/bin/bash', '-c',
     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
 
@@ -49,6 +49,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = false
+
 
 # Apps that should go to specific workspaces
 [[on-window-detected]]
