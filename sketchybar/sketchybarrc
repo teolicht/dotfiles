@@ -24,7 +24,8 @@ sketchybar --bar \
     y_offset=-2 \
     height=35 \
     blur_radius=30 \
-    color=$TRANSPARENT
+    color=$TRANSPARENT \
+    padding_left=10
 
 
 ##### Changing Defaults #####
@@ -65,14 +66,13 @@ sketchybar --add item apple left \
 
 sketchybar --add event aerospace_workspace_change
 for sid in $(aerospace list-workspaces --all); do
-    sketchybar --add item space.$sid left \
-        --subscribe space.$sid aerospace_workspace_change \
-        --set space.$sid \
+    sketchybar --add item space."$sid" left \
+        --subscribe space."$sid" aerospace_workspace_change space_windows_change \
+        --set space."$sid" \
             width=35 \
             align=center \
             icon.drawing=off \
-            background.color=$BLACK_80 \
-            background.corner_radius=0 \
+            background.color="$DARK_GRAY" \
             background.height=34 \
             label="$sid" \
             label.font.style="Black" \
@@ -82,6 +82,7 @@ done
 # Fix '1' being a bit off
 sketchybar --set space.1 \
     label.padding_left=3
+
 
 sketchybar --add item front_app left \
            --set front_app \
@@ -106,22 +107,28 @@ sketchybar --add item front_app left \
 sketchybar --add item clock right \
     --set clock \
         icon.drawing=off \
-        label.padding_left=10 \
+        label.padding_left=5 \
         label.padding_right=10 \
         label.font="SF Pro:Black:15.0" \
         label.y_offset=1 \
         background.color=0xa89ece6a \
-        background.color=$BLACK_100 \
+        background.color=$DARK_GRAY \
         update_freq=15 \
         script="$PLUGIN_DIR/clock.sh"
+        # TODO: try making items rounded and with border
+        # background.corner_radius=20 \
+        # background.border_width=2 \
+        # background.border_color="$BLACK_50$" \
+        # background.height=30 \
+        # background.y_offset=-2 \
 
 sketchybar --add item date right \
     --set date \
         icon.drawing=off \
         label.padding_left=10 \
-        label.padding_right=10 \
+        label.padding_right=5 \
         background.color=0xa89ece6a \
-        background.color=$BLACK_95 \
+        background.color=$DARK_GRAY \
         update_freq=15 \
         script="$PLUGIN_DIR/date.sh"
 
@@ -138,7 +145,7 @@ sketchybar --add item battery right \
         label.padding_right=10 \
         icon.padding_left=10 \
         background.color=0xa8e0af68 \
-        background.color=$BLACK_90 \
+        background.color=$PURPLE \
         update_freq=120 \
         script="$PLUGIN_DIR/battery.sh" \
    --subscribe battery system_woke power_source_change
@@ -167,7 +174,7 @@ sketchybar --add item wifi right \
         label.font.size=12.0 \
         label.font.style="SemiBold" \
         background.color=0xa87aa2f7 \
-        background.color=$BLACK_85 \
+        background.color=$BLUE \
         update_freq=15 \
         script="$PLUGIN_DIR/wifi.sh"
 
@@ -187,7 +194,7 @@ sketchybar --add item input_source right \
         label.padding_left=10 \
         label.padding_right=10 \
         background.color=0xa8bb9af7 \
-        background.color=$BLACK_80 \
+        background.color=$AQUA \
         update_freq=1 \
         script="$PLUGIN_DIR/input_source.sh"
 
