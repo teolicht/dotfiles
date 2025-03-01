@@ -157,6 +157,5 @@ require('lazy').setup({
   },
 })
 
-
--- Load colorscheme 
+-- Load colorscheme
 vim.cmd('colorscheme tokyonight-night')

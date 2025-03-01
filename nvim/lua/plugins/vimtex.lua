@@ -9,8 +9,8 @@ return {
       options = {
         '-shell-escape',
         '-interaction=nonstopmode',
-        '-synctex=1'
-      }
+        '-synctex=1',
+      },
     }
-  end
+  end,
 }

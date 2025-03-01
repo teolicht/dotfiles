@@ -16,14 +16,14 @@ local blink = {
     keymap = {
       preset = 'default',
       ['<C-k'] = {},
-      ['<C-s>'] = { 'show_signature', 'hide_signature', 'fallback' }
+      ['<C-s>'] = { 'show_signature', 'hide_signature', 'fallback' },
     },
 
     cmdline = {
       completion = {
         menu = { auto_show = true },
         -- Doesn't seem to be working
-        ghost_text = { enabled = true }
+        ghost_text = { enabled = true },
       },
     },
 
@@ -36,18 +36,18 @@ local blink = {
         auto_show_delay_ms = 1000,
         window = {
           border = 'rounded',
-        }
+        },
       },
       -- For a less pop-up'y configuration:
-      --    > set completion.menu.autoshow = false 
-      --    > set completion.ghost_text.enabled = true 
+      --    > set completion.menu.autoshow = false
+      --    > set completion.ghost_text.enabled = true
     },
 
     signature = {
       enabled = true,
       window = {
         -- show_documentation = true,
-      }
+      },
     },
 
     appearance = {
@@ -55,16 +55,16 @@ local blink = {
       -- Useful for when your theme doesn't support blink.cmp
       -- Will be removed in a future release
       use_nvim_cmp_as_default = true,
-      nerd_font_variant = 'mono'
+      nerd_font_variant = 'mono',
     },
 
     sources = {
       default = { 'lsp', 'path', 'snippets', 'buffer' },
     },
 
-    fuzzy = { implementation = 'prefer_rust_with_warning' }
+    fuzzy = { implementation = 'prefer_rust_with_warning' },
   },
-  opts_extend = { 'sources.default' }
+  opts_extend = { 'sources.default' },
 }
 
 local autopairs = {
@@ -90,8 +90,7 @@ local autopairs = {
     ap.add_rule(Rule('"""', '"""', 'python'))
     -- Example: to remove double-quote rule ONLY on Python filetype
     -- ap.get_rules('"')[1].not_filetypes = { 'python' }
-  end
+  end,
 }
 
 return { blink, autopairs }
-

@@ -218,7 +218,7 @@ local config = function()
   })
 
   -- Create new capabilities with blink.cmp and brodacast to LSP servers
-  local capabilities = require('blink.cmp').get_lsp_capabilities() 
+  local capabilities = require('blink.cmp').get_lsp_capabilities()
 
   -- Mason setup
   require('mason').setup()
@@ -241,9 +241,8 @@ local config = function()
 end
 
 -- Add round border around vim.lsp.buf.hover()
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-  vim.lsp.handlers.hover, { border = 'rounded' }
-)
+vim.lsp.handlers['textDocument/hover'] =
+  vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' })
 
 return {
   'neovim/nvim-lspconfig',
@@ -253,7 +252,7 @@ return {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     'jose-elias-alvarez/null-ls.nvim',
     'aznhe21/actions-preview.nvim',
-    'saghen/blink.cmp'
+    'saghen/blink.cmp',
   },
   config = config,
 }

@@ -66,11 +66,11 @@ local tokyonight = {
   lazy = false,
   config = function()
     require('tokyonight').setup({
-      -- transparent = true,
-      -- styles = {
-      --   sidebars = "transparent",
-      --   floats = "transparent",
-      -- },
+      transparent = true,
+      styles = {
+        sidebars = 'transparent',
+        floats = 'transparent',
+      },
       style = 'night',
     })
   end,
@@ -90,14 +90,14 @@ local astrotheme = {
 -- To load colorschemes faster. But I didn't notice significant difference and
 -- color for 'NORMAL' was wrong for tokyonight
 local excolors = {
-  "aileot/ex-colors.nvim",
+  'aileot/ex-colors.nvim',
   lazy = true,
-  cmd = "ExColors",
+  cmd = 'ExColors',
   ---@type ExColors.Config
   opts = {},
   config = function()
     require('ex-colors').setup()
-  end
+  end,
 }
 
 return {
