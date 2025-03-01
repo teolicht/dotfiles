@@ -5,7 +5,7 @@ export BLACK_100=0xff000000
 export BLACK_95=0xff0d0d0d
 export BLACK_90=0xff1a1a1a
 export BLACK_85=0xff262626
-export BLACK_80=0xff333333
+export BLACK_80=0xb3333333
 export BLACK_75=0xff404040
 export BLACK_70=0xff4d4d4d
 export BLACK_65=0xff595959
@@ -26,13 +26,14 @@ export WHITE=0xffffffff
 export TRANSPARENT=0x00000000
 
 
+# TODO: add different variables for different opacities
 # Tokyonight colors
-export RED=0xfff7768e
-export YELLOW=0xffe0af68
-export GREEN=0xff9ece6a
-export BLUE=0xff7aa2f7
-export PURPLE=0xffbb9af7
-export AQUA=0xff7dcfff
-export LIGHT_GRAY=0xffc0caf5
-export DARK_GRAY=0xff414868
-export BLACK=0xff15161e
+export RED=0xb3f7768e
+export YELLOW=0xb3e0af68
+export GREEN=0xb39ece6a
+export BLUE=0xb37aa2f7
+export PURPLE=0xb3bb9af7
+export AQUA=0xb37dcfff
+export LIGHT_GRAY=0xb3c0caf5
+export DARK_GRAY=0xb3414868
+export BLACK=0xb315161e
