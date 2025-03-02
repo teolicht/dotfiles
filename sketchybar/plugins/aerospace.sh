@@ -16,12 +16,10 @@ if [[ "$SENDER" == "space_windows_change" ]]; then
 else
   if [[ "$1" == "$FOCUSED_WORKSPACE" ]]; then
       sketchybar --set "$NAME" \
-          background.border_color="$T_PURPLE" \
-          background.height=32 \
+          background.border_color=0xb6bb9af7 \
           background.border_width=2 
   else
       sketchybar --set "$NAME" \
-          background.height=34 \
           background.border_width=0
   fi
 fi
