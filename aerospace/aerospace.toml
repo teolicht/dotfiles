@@ -153,12 +153,12 @@ preset = 'qwerty'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 15 
-inner.vertical = 15  
-outer.left = 10
-outer.bottom = 10 
-outer.top = 42
-outer.right = 10 
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 7 
+outer.bottom = 7
+outer.top = [{ monitor.'built-in' = 7 }, { monitor.'msi' = 38 }, 24] 
+outer.right = 7 
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -250,8 +250,6 @@ alt-s = 'exec-and-forget open -a /Applications/Spotify.app'
 alt-p = 'exec-and-forget open -a /Applications/1Password.app'
 # alt-c = 'exec-and-forget open -a /Applications/BusyCal.app' CANNOT USE because alt-c = ç 
 alt-v = 'exec-and-forget open -a /Applications/Visual\ Studio\ Code.app'
-
-alt-shift-g = 'exec-and-forget sh ~/.config/aerospace/top_gap.sh'
 
 
 # 'service' binding mode declaration.
