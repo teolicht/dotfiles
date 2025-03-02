@@ -9,7 +9,7 @@ source "$CONFIG_DIR/colors.sh"
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
-INPUT_EVENT="AppleSelectedInputSourcesChangedNotification"
+INPUT_SOURCE_EVENT="AppleSelectedInputSourcesChangedNotification"
 
 ##### Bar Appearance #####
 # Configuring the general appearance of the bar.
@@ -21,10 +21,10 @@ INPUT_EVENT="AppleSelectedInputSourcesChangedNotification"
 
 sketchybar --bar \
     position=top \
-    y_offset=-2 \
-    height=35 \
+    y_offset=-1\
+    height=34 \
+    color="$TRANSPARENT" \
     blur_radius=30 \
-    color=$TRANSPARENT \
     padding_left=10
 
 
@@ -73,7 +73,7 @@ for sid in $(aerospace list-workspaces --all); do
             align=center \
             icon.drawing=off \
             background.color="$T_DARK_GRAY" \
-            background.height=34 \
+            background.height=32 \
             label="$sid" \
             label.font.style="Heavy" \
             click_script="aerospace workspace $sid" \
@@ -184,7 +184,7 @@ sketchybar --add item wifi right \
 #         label.drawing=off \
 #         icon.drawing=off
 
-sketchybar --add event input_change $INPUT_EVENT \
+sketchybar --add event input_change $INPUT_SOURCE_EVENT \
     --add item input_source right \
     --set input_source \
         icon.drawing=off \
