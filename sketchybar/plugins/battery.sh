@@ -5,11 +5,6 @@ source "$CONFIG_DIR/colors.sh"
 PERCENTAGE="$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)"
 CHARGING="$(pmset -g batt | grep 'AC Power')"
 
-# Overriding so battery icon doesn't have transparency
-RED=0xfff7768e
-YELLOW=0xffe0af68
-GREEN=0xff9ece6a
-
 if [ "$PERCENTAGE" = "" ]; then
   exit 0
 fi

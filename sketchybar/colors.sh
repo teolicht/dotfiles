@@ -25,15 +25,29 @@ export WHITE=0xffffffff
 
 export TRANSPARENT=0x00000000
 
+export SPOTIFY_GREEN=0xb31be68c
 
-# TODO: add different variables for different opacities
-# Tokyonight colors
-export RED=0xb3f7768e
-export YELLOW=0xb3e0af68
-export GREEN=0xb39ece6a
-export BLUE=0xb37aa2f7
-export PURPLE=0xb3bb9af7
-export AQUA=0xb37dcfff
-export LIGHT_GRAY=0xb3c0caf5
-export DARK_GRAY=0xb3414868
-export BLACK=0xb315161e
+
+# --- Tokyo Night color palette ---
+
+# Full opacitiy
+export RED=0xfff7768e
+export YELLOW=0xffe0af68
+export GREEN=0xff9ece6a
+export BLUE=0xff7aa2f7
+export PURPLE=0xffbb9af7
+export AQUA=0xff7dcfff
+export LIGHT_GRAY=0xffc0caf5
+export DARK_GRAY=0xff414868
+export BLACK=0xff15161e
+
+# 70% opacity
+export T_RED=0xb3f7768e
+export T_YELLOW=0xb3e0af68
+export T_GREEN=0xb39ece6a
+export T_BLUE=0xb37aa2f7
+export T_PURPLE=0xb3bb9af7
+export T_AQUA=0xb37dcfff
+export T_LIGHT_GRAY=0xb3c0caf5
+export T_DARK_GRAY=0xb3414868
+export T_BLACK=0xb315161e
