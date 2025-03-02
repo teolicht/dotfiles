@@ -37,7 +37,7 @@ sketchybar --default \
     padding_left=0 \
     padding_right=0 \
     icon.font="JetBrainsMono Nerd Font:Bold:19.0" \
-    label.font="SF Pro:SemiBold:14.0" \
+    label.font="SF Mono:SemiBold:14.0" \
     icon.color=$WHITE \
     label.color=$WHITE \
     icon.padding_left=4 \
@@ -75,7 +75,7 @@ for sid in $(aerospace list-workspaces --all); do
             background.color="$DARK_GRAY" \
             background.height=34 \
             label="$sid" \
-            label.font.style="Black" \
+            label.font.style="Heavy" \
             click_script="aerospace workspace $sid" \
             script="$PLUGIN_DIR/aerospace.sh $sid"
 done
@@ -89,9 +89,11 @@ sketchybar --add item front_app left \
                 icon.drawing=off \
                 label.width=200 \
                 label.font.style="Bold" \
-                background.padding_left=-5 \
+                background.padding_left=-32 \
                 script="$PLUGIN_DIR/front_app.sh" \
            --subscribe front_app front_app_switched
+# background.padding_left=-32
+
 
 ##### Adding Right Items #####
 # In the same way as the left items we can add items to the right side.
@@ -109,7 +111,8 @@ sketchybar --add item clock right \
         icon.drawing=off \
         label.padding_left=5 \
         label.padding_right=10 \
-        label.font="SF Pro:Black:15.0" \
+        label.font.style="Bold" \
+        label.font.size=15.0 \
         label.y_offset=1 \
         background.color=$DARK_GRAY \
         update_freq=10 \
@@ -130,13 +133,13 @@ sketchybar --add item date right \
         update_freq=15 \
         script="$PLUGIN_DIR/date.sh"
 
-sketchybar --add item sep1 right \
-    --set sep1 \
-        label="│" \
-        label.font="JetBrainsMono Nerd Font:Bold:14.0" \
-        label.color=$BLACK_85 \
-        label.drawing=off \
-        icon.drawing=off
+# sketchybar --add item sep1 right \
+#     --set sep1 \
+#         label="│" \
+#         label.font="JetBrainsMono Nerd Font:Bold:14.0" \
+#         label.color=$BLACK_85 \
+#         label.drawing=off \
+#         icon.drawing=off
 
 sketchybar --add item battery right \
     --set battery \
@@ -149,13 +152,13 @@ sketchybar --add item battery right \
    --subscribe battery system_woke power_source_change
 
 
-sketchybar --add item sep2 right \
-    --set sep2 \
-        label="│" \
-        label.font="JetBrainsMono Nerd Font:Bold:14.0" \
-        label.color=$BLACK_85 \
-        label.drawing=off \
-        icon.drawing=off
+# sketchybar --add item sep2 right \
+#     --set sep2 \
+#         label="│" \
+#         label.font="JetBrainsMono Nerd Font:Bold:14.0" \
+#         label.color=$BLACK_85 \
+#         label.drawing=off \
+#         icon.drawing=off
 
 # sketchybar --add item cpu right \
 #     --set cpu \
@@ -176,18 +179,19 @@ sketchybar --add item wifi right \
         update_freq=15 \
         script="$PLUGIN_DIR/wifi.sh"
 
-sketchybar --add item sep3 right \
-    --set sep3 \
-        label="│" \
-        label.font="JetBrainsMono Nerd Font:Bold:14.0" \
-        label.color=$BLACK_85 \
-        label.drawing=off \
-        icon.drawing=off
+# sketchybar --add item sep3 right \
+#     --set sep3 \
+#         label="│" \
+#         label.font="JetBrainsMono Nerd Font:Bold:14.0" \
+#         label.color=$BLACK_85 \
+#         label.drawing=off \
+#         icon.drawing=off
 
 sketchybar --add item input_source right \
     --set input_source \
         icon.drawing=off \
-        label.font.style="Black" \
+        label.font.style="Heavy" \
+        label.font.size=16.0 \
         label.align=center \
         label.padding_left=10 \
         label.padding_right=10 \
@@ -196,18 +200,18 @@ sketchybar --add item input_source right \
         update_freq=1 \
         script="$PLUGIN_DIR/input_source.sh"
 
-sketchybar --add item sep4 right \
-    --set sep4 \
-        label="│" \
-        label.font="JetBrainsMono Nerd Font:Bold:14.0" \
-        label.color=$BLACK_85 \
-        label.drawing=off \
-        icon.drawing=off
+# sketchybar --add item sep4 right \
+#     --set sep4 \
+#         label="│" \
+#         label.font="JetBrainsMono Nerd Font:Bold:14.0" \
+#         label.color=$BLACK_85 \
+#         label.drawing=off \
+#         icon.drawing=off
 
 sketchybar --add bracket rightbar apple clock battery wifi input_source \
     --set rightbar \
         background.drawing=on \
-        background.height=30
+        background.height=34
 
 # -> Tring to listen to input source change event
 # sketchybar --add event input_change "AppleEnabledInputSourcesChangedNotification" \
