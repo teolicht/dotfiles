@@ -67,7 +67,7 @@ sketchybar --add item apple left \
 sketchybar --add event aerospace_workspace_change
 for sid in $(aerospace list-workspaces --all); do
     sketchybar --add item space."$sid" left \
-        --subscribe space."$sid" aerospace_workspace_change space_windows_change \
+        --subscribe space."$sid" aerospace_workspace_change \
         --set space."$sid" \
             width=34 \
             align=center \
@@ -84,15 +84,24 @@ sketchybar --set space.1 \
     label.padding_left=3
 
 
+# Other symbol: 
+sketchybar --add item chevron left \
+           --set chevron \
+                icon= \
+                icon.font.size=12.0 \
+                icon.padding_left=10 \
+                label.drawing=off \
+
+
 sketchybar --add item front_app left \
            --set front_app \
                 icon.drawing=off \
                 label.width=200 \
-                label.font="SF Pro:SemiBold:14.0" \
-                background.padding_left=-8 \
+                label.font="SF Pro:Bold:14.0" \
+                background.padding_left=-17 \
                 script="$PLUGIN_DIR/front_app.sh" \
            --subscribe front_app front_app_switched
-# background.padding_left=-32
+# For SF Mono: background.padding_left=-32
 
 
 ##### Adding Right Items #####
