@@ -48,9 +48,9 @@ if [[ "$CHARGING" != "" ]]; then
   ICON=􀢋
 fi
 
-if [[ "$PERCENTAGE" -ge 60 ]]; then
+if [[ "$PERCENTAGE" -ge 80 ]]; then
   COLOR="$GREEN"
-elif [[ "$PERCENTAGE" -ge 40 ]]; then
+elif [[ "$PERCENTAGE" -ge 30 ]]; then
   COLOR="$WHITE"
 elif [[ "$PERCENTAGE" -ge 20 ]]; then
   COLOR="$YELLOW"
