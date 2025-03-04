@@ -15,7 +15,7 @@ after-startup-command = [
 # 'exec-and-forget borders active_color=0x99e1e3e4 inactive_color=0x99494d64 width=5.0',
 
 exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE; $HOME/.config/aerospace/update_sketchybar.sh'
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE'
 ]
 
 # Start AeroSpace at login
@@ -44,6 +44,12 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+# Make Sketchybar show which workspaces have windows and which do not
+# TODO: this runs the script, that loops through all AeroSpace workspaces, *every single time*
+# the focused window is changed. It doesn't seem like AeroSpace has some 'workspace state changed'
+# (e.g. empty -> non-empty) event that could be used to make this more efficient.
+on-focus-changed = ['exec-and-forget /bin/bash -c "$HOME/.config/aerospace/update_sketchybar.sh &"']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
