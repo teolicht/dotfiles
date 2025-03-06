@@ -7,7 +7,7 @@ font-size = 13
 
 theme = tokyonight_night
 background = #16161f
-background-opacity = 0.9 
+background-opacity = 0.85 
 background-blur = true
 minimum-contrast = 1
 
