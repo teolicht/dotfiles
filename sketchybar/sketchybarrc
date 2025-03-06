@@ -19,10 +19,12 @@ INPUT_SOURCE_EVENT="AppleSelectedInputSourcesChangedNotification"
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 #
 
+HEIGHT=32
+
 sketchybar --bar \
     position=top \
     y_offset=-1\
-    height=34 \
+    height=$HEIGHT \
     color="$TRANSPARENT" \
     blur_radius=30 \
     padding_left=10
@@ -54,14 +56,15 @@ sketchybar --add item apple left \
     --set apple \
         y_offset=-1 \
         label.drawing=off \
-        icon.padding_left=8 \
-        icon.padding_right=10 \
+        icon.padding_left=7 \
+        icon.padding_right=9 \
         icon.y_offset=1 \
+        icon.color="$PURPLE" \
         background.color="$T_DARK_GRAY" \
-        background.corner_radius=50 \
-        background.border_width=3 \
-        background.height=32 \
-        background.padding_right=15 \
+        background.corner_radius=100 \
+        background.height=$((HEIGHT-2)) \
+        background.padding_right=12 \
+        background.drawing=off \
         script="$PLUGIN_DIR/apple.sh" 
 
 sketchybar --add event aerospace_workspace_change
@@ -69,11 +72,11 @@ for sid in $(aerospace list-workspaces --all); do
     sketchybar --add item space."$sid" left \
         --subscribe space."$sid" aerospace_workspace_change \
         --set space."$sid" \
-            width=34 \
+            width="$HEIGHT" \
             align=center \
             icon.drawing=off \
             background.color="$T_DARK_GRAY" \
-            background.height=32 \
+            background.height=$((HEIGHT-2)) \
             label="$sid" \
             label.font.style="Heavy" \
             click_script="aerospace workspace $sid" \
@@ -219,7 +222,7 @@ sketchybar --add event input_change $INPUT_SOURCE_EVENT \
 sketchybar --add bracket rightbar apple clock battery wifi input_source \
     --set rightbar \
         background.drawing=on \
-        background.height=34
+        background.height="$HEIGHT"
 
 # -> Tring to listen to input source change event
 # sketchybar --add event input_change "AppleEnabledInputSourcesChangedNotification" \
@@ -232,7 +235,6 @@ sketchybar --add event spotify_change $SPOTIFY_EVENT \
     --add item spotify right \
     --set spotify \
         icon= \
-        icon.y_offset=-1 \
         icon.padding_right=10 \
         icon.font.size=22.5 \
         label.drawing=off \
