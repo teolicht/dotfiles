@@ -6,6 +6,8 @@ ff() {
   [[ -n "$window_id" ]] && aerospace focus --window-id "$window_id"
 }
 
+openwin() { osascript -e "tell application \"$1\" to activate" -e 'tell application "System Events" to keystroke "n" using command down'; }
+
 # Git
 # *The `git` oh-my-zsh plugin defines many more
 alias gs="git status"
@@ -21,14 +23,14 @@ alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias df="cd ~/.dotfiles/"
 alias cfg="cd ~/.config/"
-alias ond="cd ~/Library/CloudStorage/OneDrive-UniversityofCopenhagen/"
+alias uni="cd ~/Library/CloudStorage/OneDrive-UniversityofCopenhagen/"
 alias dma="cd ~/Uni/Courses/DMA/"
 alias pop="cd ~/Uni/Courses/PoP/"
 alias cdid="cd ~/Uni/Courses/ID/"
-alias cdsu="cd ~/Uni/Courses/SU/"
-alias obd="cd ~/Obsidian/DatalogiVault/"
+alias cdsu="cd ~/Documents/Projects/SU/"
+alias obd="cd ~/Documents/Obsidian/DatalogiVault/"
 alias cdnvim="cd ~/.config/nvim/"
-alias cdbn="cd ~/Box\ Sync/Programming/Python/Bots/nerds-bot/"
+alias cdbn="cd ~/Documents/Projects/Python/Bots/nerds-bot/"
 
 # Open books
 alias clrs="open ~/Uni/Courses/DMA/Introduction_to_Algorithms_4th_edition.pdf"
@@ -44,4 +46,4 @@ alias knvim="NVIM_APPNAME=knvim nvim"
 alias c="clear"
 alias python="python3"
 alias ls="lsd"
-alias ord="cd ~/Box\ Sync/Danes\ Worldwide/Grammatik/Ordforrad; python ordforrad.py"
+alias ord="cd ~/Documents/Projects/Python/Ordforrad/; python ordforrad.py"
