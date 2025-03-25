@@ -69,7 +69,7 @@ local tokyonight = {
       transparent = true,
       styles = {
         sidebars = 'transparent',
-        floats = 'transparent',
+        -- floats = 'transparent',
       },
       style = 'night',
     })
