@@ -82,6 +82,8 @@ plugins=(
     tmux
 )
 
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
