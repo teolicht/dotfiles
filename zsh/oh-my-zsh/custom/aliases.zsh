@@ -37,7 +37,7 @@ alias clrs="open ~/Uni/Courses/DMA/Introduction_to_Algorithms_4th_edition.pdf"
 alias ihc="open ~/Uni/Courses/ID/Introduction-HumanComputer-Interaction.pdf"
 
 # Neovim distros
-alias astrovim="NVIM_APPNAME=astrovim nvim"
+alias astronvim="NVIM_APPNAME=astronvim nvim"
 alias nvchad="NVIM_APPNAME=nvchad nvim"
 alias lazyvim="NVIM_APPNAME=lazyvim nvim"
 alias knvim="NVIM_APPNAME=knvim nvim"
