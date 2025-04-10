@@ -36,7 +36,11 @@ local config = function()
         )
       end
 
-      map('K', vim.lsp.buf.hover, 'Display hover information')
+      map(
+        'K',
+        function() vim.lsp.buf.hover({ border = 'rounded' }) end,
+        'Display hover information'
+      )
 
       -- Jump to the definition of the word under your cursor.
       map(
