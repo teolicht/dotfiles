@@ -4,9 +4,11 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export DOTNET_ROOT="/opt/homebrew/opt/dotnet@8/libexec"
-export PATH="/opt/homebrew/opt/dotnet@8/bin:$PATH"
 export TERM="xterm-256color"
+export PATH="$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:$HOME/.dotnet/tools:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Override ZSH_COMPDUMP to a safe path without spaces
+export ZSH_COMPDUMP="$HOME/.zcompdump"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
