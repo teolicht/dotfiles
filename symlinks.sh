@@ -7,6 +7,7 @@ SYMLINKS=(
     "$HOME/.dotfiles/ghostty|$HOME/.config/ghostty"
     "$HOME/.dotfiles/wezterm|$HOME/.config/wezterm"
     "$HOME/.dotfiles/aerospace|$HOME/.config/aerospace"
+    "$HOME/.dotfiles/jankyborders|$HOME/.config/borders"
     "$HOME/.dotfiles/sketchybar|$HOME/.config/sketchybar"
     "$HOME/.dotfiles/karabiner/karabiner.json|$HOME/.config/karabiner/karabiner.json"
     "$HOME/.dotfiles/zsh/.zshrc|$HOME/.zshrc"
