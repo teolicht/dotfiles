@@ -5,7 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 export TERM="xterm-256color"
-export PATH="$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:$HOME/.dotnet/tools:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:$HOME/.dotnet/tools:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Library/TeX/texbin"
 
 # Override ZSH_COMPDUMP to a safe path without spaces
 export ZSH_COMPDUMP="$HOME/.zcompdump"
