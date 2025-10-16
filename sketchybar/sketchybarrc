@@ -39,7 +39,7 @@ sketchybar --default \
     padding_left=0 \
     padding_right=0 \
     icon.font="JetBrainsMono Nerd Font:Bold:19.0" \
-    label.font="SF Mono:SemiBold:14.0" \
+    label.font="SF Pro:SemiBold:14.0" \
     icon.color=$WHITE \
     label.color=$WHITE \
     icon.padding_left=4 \
@@ -59,7 +59,7 @@ sketchybar --add item apple left \
         icon.padding_left=7 \
         icon.padding_right=9 \
         icon.y_offset=1 \
-        icon.color="$PURPLE" \
+        icon.color="$WHITE" \
         background.color="$T_DARK_GRAY" \
         background.corner_radius=100 \
         background.height=$((HEIGHT-2)) \
@@ -78,7 +78,7 @@ for sid in $(aerospace list-workspaces --all); do
             background.color="$T_DARK_GRAY" \
             background.height=$((HEIGHT-2)) \
             label="$sid" \
-            label.font.style="Heavy" \
+            label.font="SF Mono:Heavy:14" \
             click_script="aerospace workspace $sid" \
             script="$PLUGIN_DIR/aerospace.sh $sid"
 done
@@ -123,8 +123,7 @@ sketchybar --add item clock right \
         icon.drawing=off \
         label.padding_left=5 \
         label.padding_right=10 \
-        label.font.style="Bold" \
-        label.font.size=15.0 \
+        label.font="SF Pro Rounded:Bold:16.0" \
         label.y_offset=1 \
         background.color=$T_DARK_GRAY \
         update_freq=10 \
@@ -202,8 +201,7 @@ sketchybar --add event input_change $INPUT_SOURCE_EVENT \
     --add item input_source right \
     --set input_source \
         icon.drawing=off \
-        label.font.style="Heavy" \
-        label.font.size=16.0 \
+        label.font="SF Mono:Heavy:16.0" \
         label.align=center \
         label.padding_left=10 \
         label.padding_right=10 \
