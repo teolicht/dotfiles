@@ -167,7 +167,7 @@ inner.horizontal = [{ monitor.'built-in' = 10 }, { monitor.'msi' = 13 }, 10]
 inner.vertical = [{ monitor.'built-in' = 10 }, { monitor.'msi' = 13 }, 10]
 outer.left = [{ monitor.'built-in' = 10 }, { monitor.'msi' = 10 }, 10]
 outer.bottom = [{ monitor.'built-in' = 10 }, { monitor.'msi' = 10 }, 10] 
-outer.top = [{ monitor.'built-in' = 7 }, { monitor.'msi' = 40 }, { monitor.'studio' = 42 }, 24] 
+outer.top = [{ monitor.'built-in' = 7 }, { monitor.'msi' = 40 }, { monitor.'studio' = 42 }, 40] # (was 24)
 outer.right = [{ monitor.'built-in' = 10 }, { monitor.'msi' = 10 }, 10] 
 
 # 'main' binding mode declaration
@@ -201,8 +201,8 @@ outer.right = [{ monitor.'built-in' = 10 }, { monitor.'msi' = 10 }, 10]
 # '''
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
+alt-period = 'layout accordion horizontal vertical' # might have to change back to alt-slash
+alt-comma = 'layout tiles  horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'
