@@ -19,6 +19,7 @@ vim.opt.breakindent = true
 -- * Save undo history
 vim.opt.undofile = true
 
+
 -- Disable netrw for nvim-tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -54,6 +55,11 @@ vim.opt.smarttab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
+
+
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.opt.foldenable = true
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
