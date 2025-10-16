@@ -24,6 +24,7 @@ alias dl="cd ~/Downloads"
 alias df="cd ~/.dotfiles/"
 alias cfg="cd ~/.config/"
 alias uni="cd ~/Uni"
+alias luni="cd ~/Documents/LocalUni"
 alias ond="cd ~/Library/CloudStorage/OneDrive-UniversityofCopenhagen/"
 alias dma="cd ~/Uni/Courses/DMA/"
 alias pop="cd ~/Uni/Courses/PoP/"
@@ -46,6 +47,8 @@ alias knvim="NVIM_APPNAME=knvim nvim"
 
 # Random
 alias c="clear"
-alias python="python3"
 alias ls="lsd"
 alias ord="cd ~/Documents/Projects/Python/Ordforrad/; python ordforrad.py"
+
+# Server
+alias sv="ssh teolicht@mm.cloudmin.anu.net"
