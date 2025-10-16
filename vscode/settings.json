@@ -114,5 +114,9 @@
   "[csharp]": {
     "editor.rulers": [100]
   },
-  "dotnet.server.useOmnisharp": true
+  "dotnet.server.useOmnisharp": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "python.defaultInterpreterPath": "/Users/teolicht/Library/CloudStorage/OneDrive-DanmarksTekniskeUniversitet/Courses/Mat1a/Python/.venv"
 }
