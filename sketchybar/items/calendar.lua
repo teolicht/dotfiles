@@ -9,7 +9,7 @@ sbar.add("item", "items.calendar", {
 
 local cal = sbar.add("item", {
     icon = {
-        font = "SF Pro:Regular:14.0",
+        font = "SF Pro:Medium:14.0",
         padding_left = 7,
         -- color = colors.white,
         -- padding_left = 8,
