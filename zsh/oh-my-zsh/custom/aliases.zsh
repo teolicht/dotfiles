@@ -49,6 +49,3 @@ alias knvim="NVIM_APPNAME=knvim nvim"
 alias c="clear"
 alias ls="lsd"
 alias ord="cd ~/Documents/Projects/Python/Ordforrad/; python ordforrad.py"
-
-# Server
-alias sv="ssh teolicht@mm.cloudmin.anu.net"
