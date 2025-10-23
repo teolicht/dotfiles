@@ -13,6 +13,9 @@ local front_app = sbar.add("item", "front_app", {
         },
         padding_left = 0
     },
+    background = {
+        padding_left = 0
+    },
     updates = true
 })
 
