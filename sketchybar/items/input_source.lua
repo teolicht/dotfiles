@@ -24,7 +24,7 @@ local input_item = sbar.add("item", "items.input_source", {
         color = colors.t_aqua,
         border_color = colors.transparent,
         -- Gap is too big for some reason, so this is needed
-        padding_right = 0,
+        padding_right = -1,
     }
 })
 

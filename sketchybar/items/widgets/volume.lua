@@ -4,14 +4,14 @@ local settings = require("settings")
 
 local popup_width = 250
 
-local volume_percent = sbar.add("item", "widgets.volume1", {
+local volume_percent = sbar.add("item", "widgets.volume_percent", {
     position = "right",
     icon = {
         drawing = false
     },
     label = {
         string = "??%",
-        padding_left = -1,
+        padding_left = 0,
         font = {
             family = settings.font.text,
             style = "SemiBold"
@@ -19,18 +19,15 @@ local volume_percent = sbar.add("item", "widgets.volume1", {
     }
 })
 
-local volume_icon = sbar.add("item", "widgets.volume2", {
+local volume_icon = sbar.add("item", "widgets.volume_icon", {
     position = "right",
     padding_right = -1,
     icon = {
         string = icons.volume._100,
         width = 0,
         align = "left",
-        color = colors.grey,
-        font = {
-            style = settings.font.style_map["Regular"],
-            size = 14.0
-        }
+        color = colors.t_dark_gray,
+        font = "JetBrainsMono Nerd Font:Regular:14.0"
     },
     label = {
         width = 25,
@@ -95,11 +92,11 @@ volume_percent:subscribe("volume_change", function(env)
 
     local lead = ""
     if volume < 10 then
-        lead = "0"
+        lead = ""
     end
 
     volume_icon:set({
-        label = icon
+        label = icon,
     })
     volume_percent:set({
         label = lead .. volume .. "%"
@@ -182,4 +179,10 @@ end)
 -- volume_percent:subscribe("mouse.clicked", volume_toggle_details)
 -- volume_percent:subscribe("mouse.exited.global", volume_collapse_details)
 -- volume_percent:subscribe("mouse.scrolled", volume_scroll)
---
+
+
+-- I have done it this way because I'm not sure how to control the order the items get added otherwise.
+sbar.exec("sketchybar --move 'widgets.volume_icon' after 'wifi' " ..
+          "--move 'widgets.volume_percent' before 'widgets.volume_icon' " ..
+          "--move 'widgets.volume.padding' before 'items.input_source'")
+

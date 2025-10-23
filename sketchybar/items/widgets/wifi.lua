@@ -56,7 +56,7 @@ local settings = require("settings")
 --     y_offset = -4
 -- })
 
-local wifi = sbar.add("item", {
+local wifi = sbar.add("item", "wifi", {
     position = "right",
     label = {
         padding_right = 5,
