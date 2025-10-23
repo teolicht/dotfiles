@@ -178,17 +178,15 @@ local config = function()
     -- PYTHON --
     --> pyright for completion only
     pyright = {
-      init_options = {
-        settings = {
-          pyright = {
-            -- Using Ruff's import organizer
-            disableOrganizeImports = true,
-          },
-          python = {
-            analysis = {
-              ignore = { '*' }, -- using ruff
-              typeCheckingMode = 'off', -- using mypy
-            },
+      settings = {
+        pyright = {
+          -- Using Ruff's import organizer
+          disableOrganizeImports = true,
+        },
+        python = {
+          analysis = {
+            ignore = { '*' }, -- using ruff
+            typeCheckingMode = 'off', -- using mypy
           },
         },
       },
@@ -209,6 +207,7 @@ local config = function()
   null_ls.setup({
     sources = {
       null_ls.builtins.diagnostics.mypy.with({
+        prefer_local = '.venv/bin',
         method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
         extra_args = {
           '--show-column-numbers',
