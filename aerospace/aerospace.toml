@@ -15,8 +15,11 @@ after-login-command = []
 #     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE'
 # ]
 exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE; $HOME/.config/aerospace/update_sketchybar.sh &'
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE'
 ]
+# THIS COMMAND IS NEEDED IF USING MY OLD SKETCHYBAR CONFIG,
+# ON THE NEW ONE IT JUST THROWS ERRORS.
+# $HOME/.config/aerospace/update_sketchybar.sh &'
 
 start-at-login = true
 
