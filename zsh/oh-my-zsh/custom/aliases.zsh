@@ -49,3 +49,35 @@ alias knvim="NVIM_APPNAME=knvim nvim"
 alias c="clear"
 alias ls="lsd"
 alias ord="cd ~/Documents/Projects/Python/Ordforrad/; python ordforrad.py"
+
+alias ..='cd ..'
+alias 2..='cd ../..'
+alias 3..='cd ../../..'
+alias 4..='cd ../../../..'
+alias 5..='cd ../../../../..'
+
+alias rmd="rm -rf"
+
+# Make directory and cd into it
+mkcd () {
+  \mkdir -p "$1"
+  cd "$1"
+}
+
+# cd into directory and check contents
+cdls () {
+  \cd "$1"
+  ls
+}
+
+boop() {
+  "$@"
+  local last=$?
+  if [[ $last -eq 0 ]]; then
+    notify "'$*' is done, SUCCESS"
+  else
+    notify "'$*' is done, FAILURE"
+  fi
+  return $last
+}
+

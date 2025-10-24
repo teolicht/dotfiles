@@ -8,7 +8,7 @@ export TERM="xterm-256color"
 
 # --- PATH ---
 # User scripts
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.dotfiles/bin:$PATH"
 # Homebrew
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 # .NET tools

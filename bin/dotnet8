@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+# This script sets the global.json dotnet version to 8, then
+# puts it back to 7. This was due to me having to use dotnet7
+# in uni, but dotnet8 for everything else.
+
+# Path to your normal global.json
+GLOBAL_JSON_PATH="$HOME/global.json"
+
+# Ensure global.json exists
+if [ ! -f "$GLOBAL_JSON_PATH" ]; then
+  echo "Error: $GLOBAL_JSON_PATH not found."
+  exit 1
+fi
+
+# Backup the original global.json
+cp "$GLOBAL_JSON_PATH" "$GLOBAL_JSON_PATH.bak"
+
+# Replace SDK version to 8.0.407
+jq '.sdk.version = "8.0.407"' "$GLOBAL_JSON_PATH.bak" > "$GLOBAL_JSON_PATH"
+
+# Run the dotnet command
+dotnet "$@"
+STATUS=$?
+
+# Restore the original global.json
+mv "$GLOBAL_JSON_PATH.bak" "$GLOBAL_JSON_PATH"
+
+exit $STATUS
