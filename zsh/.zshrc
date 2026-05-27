@@ -15,6 +15,8 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
 # TeX
 export PATH="/Library/TeX/texbin:$PATH"
+# Node
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 # Override ZSH_COMPDUMP to a safe path without spaces
 export ZSH_COMPDUMP="$HOME/.zcompdump"

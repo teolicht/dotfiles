@@ -25,7 +25,8 @@ function update_spaces()
             no_app = false
             local app_name = app["app-name"]
             local lookup = app_icons[app_name]
-            local icon = ((lookup == nil) and app_icons["default"] or lookup)
+            -- local icon = ((lookup == nil) and app_icons["default"] or lookup)
+            local icon = lookup or app_icons["Default"] or "?"
             icon_line = icon_line .. " " .. icon
         end
 

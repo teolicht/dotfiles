@@ -158,7 +158,7 @@ return {
 	["System­einstellungen"] = ":gear:",
 	["Gemini"] = ":gemini:",
 	["Google Gemini"] = ":gemini:",
-	["Ghostty"] = ":terminal:",
+	["Ghostty"] = ":ghostty:",
 	["GIMP"] = ":gimp:",
 	["GitHub Desktop"] = ":git_hub:",
 	["Godot"] = ":godot:",

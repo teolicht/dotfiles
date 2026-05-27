@@ -1,8 +1,8 @@
 {
-  "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.settings.editor": "json",
 
-    "editor.fontFamily": "CaskaydiaMono Nerd Font Light",
+    "editor.fontFamily": "CaskaydiaMono Nerd Font",
     "editor.fontSize": 13,
     "editor.cursorBlinking": "solid",
     "editor.lineNumbers": "relative",
@@ -21,7 +21,64 @@
     // vscodevim settings 
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.color": "#f79cff",
-    // "vim.enableNeovim": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    // "vim.normalModeKeyBindings": [
+    //   {
+    //     "before": [""]
+    //   },
+    // ],
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["leader", "f", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["leader", "f", "g"],
+            "commands": ["workbench.action.findInFiles"]
+        },
+        {
+            "before": ["leader", "r", "d"],
+            "commands": ["workbench.actions.view.problems"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["leader", "n"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            "before": ["leader", "p"],
+            "commands": ["editor.action.marker.prev"]
+        },
+        {
+            "before": ["leader", "q", "f"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["g", "D"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
+            "before": ["g", "R"],
+            "commands": ["references-view.findReferences"]
+        },
+    ],
+    "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+    },
+    // To improve performance
+    "extensions.experimental.affinity": {
+      "vscodevim.vim": 1
+    },
+      
 
     // Disable annoying Ionide actions
     "FSharp.inlayHints.parameterNames": false,
@@ -117,6 +174,5 @@
   "dotnet.server.useOmnisharp": true,
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "python.defaultInterpreterPath": "/Users/teolicht/Library/CloudStorage/OneDrive-DanmarksTekniskeUniversitet/Courses/Mat1a/Python/.venv"
+  "github.copilot.nextEditSuggestions.enabled": true
 }
