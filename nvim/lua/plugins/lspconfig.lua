@@ -101,7 +101,7 @@ local config = function()
       -- When you move your cursor, the highlights will be cleared (the second autocommand).
       if
         client
-        and client.supports_method(
+        and client:supports_method(
           vim.lsp.protocol.Methods.textDocument_documentHighlight
         )
       then
@@ -139,7 +139,7 @@ local config = function()
       -- Toggle inlay hints
       if
         client
-        and client.supports_method(
+        and client:supports_method(
           vim.lsp.protocol.Methods.textDocument_inlayHint
         )
       then
@@ -203,22 +203,22 @@ local config = function()
   }
 
   -- Enable mypy for Python type checking
-  local null_ls = require('null-ls')
-  null_ls.setup({
-    sources = {
-      null_ls.builtins.diagnostics.mypy.with({
-        prefer_local = '.venv/bin',
-        method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
-        extra_args = {
-          '--show-column-numbers',
-          '--check-untyped-defs',
-          '--warn-no-return',
-          '--warn-return-any',
-          '--warn-unreachable',
-        },
-      }),
-    },
-  })
+  -- local null_ls = require('null-ls')
+  -- null_ls.setup({
+  --   sources = {
+  --     null_ls.builtins.diagnostics.mypy.with({
+  --       prefer_local = '.venv/bin',
+  --       method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+  --       extra_args = {
+  --         '--show-column-numbers',
+  --         '--check-untyped-defs',
+  --         '--warn-no-return',
+  --         '--warn-return-any',
+  --         '--warn-unreachable',
+  --       },
+  --     }),
+  --   },
+  -- })
 
   -- Create new capabilities with blink.cmp and brodacast to LSP servers
   local capabilities = require('blink.cmp').get_lsp_capabilities()

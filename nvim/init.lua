@@ -67,6 +67,14 @@ vim.opt.signcolumn = 'yes'
 -- Enable 24-bit RGB color
 vim.opt.termguicolors = true
 
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    underline = true,
+    severity_sort = true,
+    update_in_insert = false,
+})
+
 -- Set default border for all floating windows
 -- vim.o.winborder = 'solid'
 
