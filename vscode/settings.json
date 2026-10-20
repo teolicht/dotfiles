@@ -172,7 +172,7 @@
     "editor.rulers": [100]
   },
   "dotnet.server.useOmnisharp": true,
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+  "jupyter.askForKernelRestart": false
 }
