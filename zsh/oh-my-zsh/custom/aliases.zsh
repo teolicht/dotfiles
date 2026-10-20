@@ -15,6 +15,7 @@ alias df="cd ~/.dotfiles/"
 alias cfg="cd ~/.config/"
 alias uni="cd ~/Uni"
 alias puni="cd ~/Documents/UniPython/"
+alias move="python3 ~/Documents/UniPython/move.py"
 alias ond="cd ~/Library/CloudStorage/OneDrive-DanmarksTekniskeUniversitet/"
 alias cdnvim="cd ~/.config/nvim/"
 alias cdbn="cd ~/Documents/Projects/Python/Bots/nerds-bot/"
@@ -46,7 +47,14 @@ alias copy="pbcopy"
 alias sbon="sketchybar --bar hidden=off"
 alias sboff="sketchybar --bar hidden=on"
 
+# Cpp
+alias cppbuild="clang++ -g -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror -pedantic-errors -std=c++23"
+
 # --- FUNCTIONS ---
+#
+cppbuildrun() {
+    cppbuild -o "${1%.cpp}" "$1" && "./${1%.cpp}"
+}
 
 ff() {
   local window_id
